@@ -20,12 +20,13 @@ public class IndependentConjunctionSolution {
         Graph<Vertex> residualGraph = graph.copy();
         Set<Vertex> solutionSet = new HashSet<>();
 
-
-        while (!residualGraph.isEmpty()) {
+        for (int i = 5; i < 64 && !residualGraph.isEmpty(); i++) {
             List<Vertex> vertexes = new ArrayList<>(residualGraph.getAllVertexes());
-            vertexes.sort(new VertexComparator(residualGraph));
 
-            Vertex vertexSelected = residualGraph.findVertexById(vertexes.get(0).getId());
+            Vertex vertexSelected = residualGraph.findVertexById(i);
+            if (vertexSelected == null) {
+                continue;
+            }
             solutionSet.add(vertexSelected);
 
             markedQueenInOriginaLGraph(vertexSelected.getId());
@@ -33,8 +34,7 @@ public class IndependentConjunctionSolution {
             residualGraph.removeVertexAndNeighbors(vertexSelected);
         }
 
-
-        System.out.println(solutionSet.size());
+        System.out.println("Quantidade de rainhas posicionadas = " + solutionSet.size() + "\n");
     }
 
     private void markedQueenInOriginaLGraph(Integer id) {
