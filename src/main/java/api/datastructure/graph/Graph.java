@@ -51,6 +51,7 @@ public class Graph<K extends Vertex> {
     public void setVertexAndEdges(K vertex, Set<K> edges) {
         this.elements.put(vertex, edges);
     }
+
     public K findVertexById(int sourceVertexId) {
         for (K currentVertex : elements.keySet()) {
             if (currentVertex.getId().equals(sourceVertexId)) {

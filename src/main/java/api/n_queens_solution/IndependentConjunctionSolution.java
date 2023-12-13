@@ -2,7 +2,6 @@ package api.n_queens_solution;
 
 import api.datastructure.graph.Graph;
 import api.datastructure.graph.Vertex;
-import api.datastructure.graph.VertexComparator;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -12,6 +11,7 @@ import java.util.Set;
 public class IndependentConjunctionSolution {
 
     private Graph<Vertex> graph;
+
     public IndependentConjunctionSolution(Graph<Vertex> graph) {
         this.graph = graph;
     }
@@ -43,9 +43,8 @@ public class IndependentConjunctionSolution {
     }
 
     public void getDisplayInformation() {
-
         int value = (int) Math.sqrt(graph.getSize());
-        int count  = 0;
+        int count = 0;
         for (int i = 0; i < value; i++) {
             for (int j = 0; j < value; j++) {
                 Vertex currentVertex = graph.findVertexById(count);
@@ -60,7 +59,6 @@ public class IndependentConjunctionSolution {
             }
             System.out.println();
         }
-
     }
 
 }
