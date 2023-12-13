@@ -21,7 +21,7 @@ Arquivo de entrada [Tabuleiro](src/main/java/input/Tabuleiro_com_incompatibilida
 
 ### Segunda forma:
 
-**Levando em consideração que você esteja com o terminal aberto na pasta do projeto:**
+**Considerando que você esteja com o terminal aberto na pasta do projeto:**
 
 Já deixei um Makefile configurado e um *".jar"* pronto para execução basta rodar o programa com:
 ```bash
