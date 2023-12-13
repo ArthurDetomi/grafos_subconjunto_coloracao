@@ -133,3 +133,4 @@ Após isso cheguei a conclusão que utilizando essa heurística muito simples o 
 melhor que esse, para alcançar uma solução ótima e necessário um algoritmo mais complexo de conjuntos
 independentes, que retorna uma solução máxima não maximal como o método de Maghout.
 
+Copyright (c) <2023> <[Geraldo Arthur Detomi](https://github.com/Arthurdetomi)>
