@@ -1,9 +1,6 @@
 package api.datastructure.graph;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Graph<K extends Vertex> {
 
@@ -33,7 +30,7 @@ public class Graph<K extends Vertex> {
         neighborEdges.add(origin);
     }
 
-    public long getNeighborsCount(K vertex) {
+    public int getNeighborsCount(K vertex) {
         Set<K> vertexEdges = getEdges(vertex);
 
         if (vertexEdges == null) {
@@ -45,6 +42,10 @@ public class Graph<K extends Vertex> {
 
     public Set<K> getEdges(K vertex) {
         return elements.get(vertex);
+    }
+
+    public Set<K> getAllVertexes() {
+        return elements.keySet();
     }
 
     public void setVertexAndEdges(K vertex, Set<K> edges) {
@@ -69,4 +70,23 @@ public class Graph<K extends Vertex> {
 
         return copyGraph;
     }
+
+    public boolean isEmpty() {
+        return elements.isEmpty();
+    }
+
+    public void removeVertexAndNeighbors(K vertex) {
+        Set<K> edges = getEdges(vertex);
+
+        for (K currentVertex : edges) {
+            elements.remove(currentVertex);
+        }
+
+        elements.remove(vertex);
+    }
+
+    public int getSize() {
+        return elements.size();
+    }
+
 }

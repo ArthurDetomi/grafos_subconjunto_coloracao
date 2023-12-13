@@ -42,7 +42,7 @@ public class Vertex {
         this.label = label;
     }
 
-    public boolean isHasQueen() {
+    public boolean hasQueen() {
         return hasQueen;
     }
 
