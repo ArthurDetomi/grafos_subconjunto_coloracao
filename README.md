@@ -41,7 +41,7 @@ E apos isso rodar o comando:
 make rodar_programa_pos_compilacao
 ```
 
-### Resposta esperada (versão resumida):
+### Resposta esperada:
 ```
 Quantidade de rainhas posicionadas = 7
 
