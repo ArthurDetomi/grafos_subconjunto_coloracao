@@ -55,7 +55,7 @@ public class ColoringAlgorithm {
         this.totalColorsUsed = markedColorsUsed.size();
     }
 
-    Character getFirstColorAvailable(Set<Character> colorsBlocked) {
+    private Character getFirstColorAvailable(Set<Character> colorsBlocked) {
         for (char color = 'A'; color <= 'Z'; color++) {
             if (!colorsBlocked.contains(color)) {
                 return color;
