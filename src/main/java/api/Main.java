@@ -1,5 +1,6 @@
 package api;
 
+import api.coloring_algorithm.ColoringAlgorithm;
 import api.datastructure.graph.Graph;
 import api.datastructure.graph.Vertex;
 import api.datastructure.graph.record.FileTextReader;
@@ -13,8 +14,13 @@ public class Main {
 
         Graph<Vertex> graph = fileReader.getReadedGraph();
 
-        IndependentConjunctionSolution ics = new IndependentConjunctionSolution(graph);
+        ColoringAlgorithm coloringAlgorithm = new ColoringAlgorithm(graph);
+        coloringAlgorithm.solve();
+        coloringAlgorithm.getDisplayInformation();
 
+        System.out.println();
+
+        IndependentConjunctionSolution ics = new IndependentConjunctionSolution(graph);
         ics.simpleSolutionHeuristic();
         ics.getDisplayInformation();
     }
