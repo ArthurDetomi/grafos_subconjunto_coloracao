@@ -7,6 +7,7 @@ public class Vertex {
     private Integer id;
     private String label;
     private boolean hasQueen;
+    private Character color;
 
     public Vertex(Integer id, String label) {
         this.id = id;
@@ -48,5 +49,13 @@ public class Vertex {
 
     public void setHasQueen(boolean hasQueen) {
         this.hasQueen = hasQueen;
+    }
+
+    public Character getColor() {
+        return color;
+    }
+
+    public void setColor(Character color) {
+        this.color = color;
     }
 }
