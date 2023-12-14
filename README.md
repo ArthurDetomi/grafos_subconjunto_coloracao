@@ -73,7 +73,7 @@ R 0 0 0 0 0 0 0
 
 ## Atividade 6: rainhas (coloraçao)
 
-#### [Coloracao Vertices Documentacao]()
+#### [Coloracao Vertices Documentacao](documentations/coloracao_doc.md)
 
 ## Atividade 5: oito rainhas (conjuntos independentes)
 
